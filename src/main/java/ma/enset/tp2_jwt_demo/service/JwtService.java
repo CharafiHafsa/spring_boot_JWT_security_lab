@@ -17,9 +17,9 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 @Service 
 public class JwtService {
-    @Value("jwt.secret") 
+    @Value("${jwt.secret}") 
     private String jwtSecret;
-    @Value("jwt.expiration")
+    @Value("${jwt.expiration}")
     private Long jwtExpiration;
 
     private SecretKey getSecretKey(){
